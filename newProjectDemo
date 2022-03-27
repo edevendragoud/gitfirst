@@ -1,0 +1,28 @@
+public class BaseClaas {
+	public static Logger logger;
+	public String baseUrL="http://demo.guru99.com/V4";
+	public String username="mngr392418";
+	public String password="AnYbamY";
+	public static WebDriver driver;
+	ReadConfig read=new ReadConfig();
+	
+//	public static Logger logger;
+//	public String baseUrL=read.GetUrl();
+//	public String username=read.UserName();
+//	public String password=read.PassWord();
+//	public static WebDriver driver;
+@BeforeClass
+	public void SetUp(){
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//Drivers//chromedriver.exe");
+//	System.setProperty("webdriver.chrome.driver",read.ChromePath());
+		driver=new ChromeDriver();
+		
+		 logger=Logger.getLogger("eBanking"); 
+		 PropertyConfigurator.configure("log4j.properties");
+}
+@AfterClass
+public void TearDown(){
+	driver.quit();
+	
+}
+}
