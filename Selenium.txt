@@ -1,0 +1,175 @@
+1.How do you launch browser using selenium?
+	System.setProperty("webdriver.chrome.driver"," chromedriver xpath ");
+	WebDriver driver = new ChromeDriver();	
+
+2.How to handle a drop-down field using Selenium WebDriver?
+	To handle drop down we are using Select Class.
+	By using Select class we are creating an object by using new keyword and we are passing driver variable as a parameter. With select class varibale we are able to handle three methods.
+	>selectByVisibleText.
+	>selectByValue.
+	>selectByIndex. Index start from 0
+
+3.What are Alerts/popups in Selenium?
+	An Alert in Selenium is a small message box which appears on screen to give some information or notification to user.
+	It notifies the user with some specific information or error, asks for permission to perform certain tasks and it also provides warning messages as well.
+
+	We can handle alerts by using     driver.switchTo().Alert().accept();
+
+	1.Confirmaton Alert = we need to accept() or dismiss()
+	2.Mandatory Alert or simple Alert = we need to accept(). it is mandatory to complete the flow.
+
+4.How to handle a Simple Alert using Selenium WebDriver?
+	Mandatory Alert or simple Alert = we need to accept(). it is mandatory to complete the flow.
+
+5.What are different types of locators ?
+	There are Eight type of locators.
+
+	1.Id.			it is mandatory. if not ID then prefer Xpath.
+	2.Name
+	3.Xpath.
+	4.CssSelector.
+	5.TagName.
+	6.ClassName.
+	7.Partial Link Text.
+	8.Link Text.
+
+6.What is Action Class in Selenium?
+	Action Class in Selenium is a built-in feature provided by the selenium for handling mouse events.
+	It includes various operations such as multiple events clicking by control key, drag and drop events and many more.
+	These operations are performed using the advanced user interactions API.
+
+
+
+Level 2
+
+1.How do you handle Multiple windows in your application?
+	get.windowhandle(): This method helps to get the window handle of the current window.
+	get.windowhandles(): This method helps to get the handles of all the windows opened.
+
+2.Difference between findElement() and findElements() ?
+	findElement method is used to access a single web element on a page.
+	It returns the first matching element. It throws a NoSuchElementException exception when it's fails to find the element.
+	
+	findElements method returns the list of all matching elements.
+	It throws an empty list when the element is not available or doesn’t exist on the page. 
+	It doesn’t throw NoSuchElementException.
+
+3.What is XPath?
+	XPath in Selenium is an XML path used for navigation through the HTML structure of the page.
+	
+	Xpath =//tagname[@attribute='attributeValue']
+
+	XML stands for Extensible Markup Language.
+	HTML stands for Hypertext Markup Language,
+
+1. How much do you rate your self in selenium.?
+	
+	2.5 in selenium.
+
+2. What are the locators used to identify element.?
+
+	There are Eight type of locators.
+
+	1.Id.
+	2.Name
+	3.Xpath.
+	4.CssSelector.
+	5.TagName.
+	6.ClassName.
+	7.Partial Link Text.
+	8.Link Text.
+
+3. What is stale element exception
+	If any changes in DOM then the WebElement goes stale.
+	If you are trying to access the element, it will give — StaleElementReferenceException
+	It means decay, old and no fresh, It basically means element is no longer available in DOM.
+✅ Causes of Stale Element Reference Exception
+	element is no longer attached to the DOM.
+	element has been deleted entirely.
+✅ How To Handle Stale Element Reference Exception in Selenium
+	Page Refresh and Try to check again.
+	Re try(with for loop)
+
+4. What are the waits you used and why used that
+	
+	1.Implicit Wait
+	2.Explicit Wait
+	3.Fluent Wait
+	
+	If you declare Implicit Wait in Selenium, it will check for each and every element. 
+	If we are given 60 Seconds of time to search for elements, it will keep on searching to found an element and once the element is found in 30 seconds then implicit wait will release.
+	And next it will wait for other element.If the element is not found it throws "NoSuchElementException".
+
+	If we declare Explicit Wait in Selenium, it will check for only one or particular element.
+	If we are given 60 Seconds of time to search per element, it will keep on searching to found an element and once the element is found in 30 seconds then implicit wait will release.
+	It will work for only one element not for all.
+
+	The Explicit Wait in Selenium is used to tell the Web Driver to wait for certain conditions (Expected Conditions) or maximum time exceeded before throwing “ElementNotVisibleException” exception. 
+	It is an intelligent kind of wait, but it can be applied only for specified elements.
+	It gives better options than implicit wait as it waits for dynamically loaded Ajax elements.
+
+ 	Fluent Wait looks for a web element repeatedly at regular intervals until timeout happens or until the element is found.
+	If the element is found,It does not wait out the entire duration defined in the code.
+
+5.Can u explain about the actions in selenium and what is the use of it?
+	
+	Action Class in Selenium is a built-in feature provided by the selenium for handling mouse events. 
+	It includes various operations such as multiple events clicking by control key, drag and drop events and many more.
+	These operations are performed using the advanced user interactions API.
+
+6.How do u handle the dropdown in selenium?
+	In dropDown we need to select for that we are using Select Class.
+	In Select class, New keyword is used to create its object and it specifies the web element location.
+	>selectByVisibleText.
+	>selectByValue.
+	>selectByIndex.
+
+7.What is differnce between findElement and findElements?
+	findElement method is used to access a single web element on a page.
+	It returns the first matching element. It throws a NoSuchElementException exception when it's fails to find the element.
+	
+	findElements method returns the list of all matching elements.
+	It throws an empty list when the element is not available or doesn’t exist on the page. 
+	It doesn’t throw NoSuchElementException.
+
+8.What is close and quit?
+	Close()  is used to close the current open window.
+	It closes the current open window on which driver has focus on.
+	
+	Quit() is used to quit the whole browser session along with all the associated browser windows, tabs and pop-ups.
+	It will kill the complete sessions in the ram.
+
+9.Differnce between throw,throws and throwable?
+	Throw will throw new exception to terminate the block
+	throws will give information.
+	throwable is the parent class.
+
+10.what are the Exceptions in selenium? 
+
+	NoSuchElementException.
+	NoSuchWindowException.
+	NoSuchFrameException.
+	NoAlertPresentException.
+	InvalidSelectorException.
+	ElementNotVisibleException.
+	ElementNotSelectableException.
+	TimeoutException.
+
+11.What are the Advantages of Selenium?
+
+	Language and Framework Support. ...
+	Open Source Availability. ...
+	Multi-Browser Support. ...
+	Support Across Various Operating Systems. ...
+	Ease Of Implementation. ...
+	Reusability and Integrations. ...
+	Flexibility. ...
+	Parallel Test Execution and Faster Go-to-Market.
+
+12.What are the DisAdvantages of Selenium?
+
+	No reliable Technical Support from anybody. ...
+	It supports Web-based applications only. ...
+	Difficult to use, takes more time to create Test cases. ...
+	Difficult to Setup Test Environment when it compares to Vendor Tools like UFT, RFT, SilkTest etc... ...
+	Limited support for Image Testing.
